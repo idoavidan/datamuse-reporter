@@ -14,7 +14,7 @@ function _fetchWordsToDB(words = WORDS) {
 
 //make and display report
 //usually should be created dynamically and/or  View and DB should be separated
-//but this task make them coupled anyway (db table for each endpoint)
+//but this task make them coupled anyway (db table for each endpoint) and web sql dosent support async/await
 function _makeReport() {
   document.getElementById("reportTable").hidden = false;
   document.getElementById("chartContainer").hidden = false;
