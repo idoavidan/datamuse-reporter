@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title><Title></Title></title>
+  </head>
+  <body>
+
+    <div id="app">
+      <button onclick="_fetchWordsToDB()">Fetch-words</button>
+      <button onclick="_makeReport()">Show-report</button>
+      <br/>
+      <br/>
+      <table id="reportTable" hidden>
+        <tr>
+          <th>Tag</th>
+          <th>count</th> 
+        </tr>
+        <tr>
+          <td>influencer</td>
+          <td id="influencer">0</td> 
+        </tr>
+        <tr>
+          <td>marketing</td>
+          <td id="marketing">0</td> 
+        </tr>
+        <tr>
+          <td>affiliate</td>
+          <td id="affiliate">0</td> 
+        </tr>
+      </table>
+      <div id="chartContainer" style="height: 300px; width: 100%;" hidden></div>
+
+    </div>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <!-- my code -->
+    <script src="store.js"></script>
+    <script src="main.js"></script>
+
+  </body>
+</html>
