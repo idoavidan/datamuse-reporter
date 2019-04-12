@@ -26,10 +26,12 @@ function updateReportFromDB() {
     tx.executeSql("SELECT COUNT(*) AS c FROM INFLUENCER", [], function(tx, r) {
       document.getElementById("influencer").innerHTML = r.rows.item(0).c;
       chart.options.data[0].dataPoints[0].y = r.rows.item(0).c;
+      chart.render();
     });
     tx.executeSql("SELECT COUNT(*) AS c FROM MARKETING", [], function(tx, r) {
       document.getElementById("marketing").innerHTML = r.rows.item(0).c;
       chart.options.data[0].dataPoints[1].y = r.rows.item(0).c;
+      chart.render();
     });
     tx.executeSql("SELECT COUNT(*) AS c FROM AFFILIATE", [], function(tx, r) {
       document.getElementById("affiliate").innerHTML = r.rows.item(0).c;
